@@ -8,14 +8,16 @@ class Product
     private float $price;
     private String $productDescription;
     private String $colour;
+    private String $imagePath;
 
-    public function __construct(string $productID, String $adminID, string $brand, float $price, string $productDescription, string $colour){
+    public function __construct(string $productID, String $adminID, string $brand, float $price, string $productDescription, string $colour,String $imagePath){
         $this->productID = $productID;
         $this->adminID = $adminID;
         $this->brand = $brand;
         $this->price = $price;
         $this->productDescription = $productDescription;
         $this->colour = $colour;
+        $this->imagePath = $imagePath;
     }
     public function __construct1(){ }
 
@@ -44,14 +46,6 @@ class Product
     {
         $this->brand = $brand;
     }
-    public function getSize(): float
-    {
-        return $this->size;
-    }
-    public function setSize(float $size): void
-    {
-        $this->size = $size;
-    }
     public function getPrice(): float
     {
         return $this->price;
@@ -76,6 +70,15 @@ class Product
     {
         $this->colour = $colour;
     }
+    public function getImagePath(): string
+    {
+        return $this->imagePath;
+    }
+    public function setImagePath(string $imagePath): void
+    {
+        $this->imagePath = $imagePath;
+    }
+
 
     //Filter by size
     public function filterSize():void{}
@@ -87,7 +90,7 @@ class Product
     public function sortProduct(): void{}
 
     public function __toString(){
-        return "ProductID: ". $this->productID. ", brand: ".  $this->brand  . ", price: " . $this->price . ", fit: " . $this->productDescription . ", colour: " . $this->colour . ", Added/updated by: ".$this->adminID;
+        return "ProductID: ". $this->productID. ", brand: ".  $this->brand  . ", price: " . $this->price . ", fit: " . $this->productDescription . ", colour: " . $this->colour . ", Added/updated by: ".$this->adminID . ", Image Path = " . $this->imagePath;
     }
 
 

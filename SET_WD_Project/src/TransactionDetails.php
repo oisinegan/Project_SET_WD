@@ -6,8 +6,12 @@ class TransactionDetails
     private $cart = array();
     private float $cost;
 
+    public function __construct(){
+
+    }
+
     //Checkout - Calculate total price of items combined
-    public function __construct(Transaction $transaction, array &$cart)
+    public function __construct1(Transaction $transaction, array &$cart)
     {
         $this->transaction = $transaction;
         $this->cart = $cart;

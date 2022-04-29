@@ -13,7 +13,6 @@ class Customer extends User
     //Payment
     private String $cardType;
     private String $cardNumber;
-    private String $cardExpiry;
     private String $cardSecurityNumber;
 
     /* Multiple constructors:
@@ -89,7 +88,7 @@ class Customer extends User
     {
         return $this->cardExpiry;
     }
-    public function getCardSecurityNumber(): string
+    public function getCardSecurity(): string
     {
         return $this->cardSecurityNumber;
     }
@@ -129,7 +128,7 @@ class Customer extends User
     {
         $this->cardExpiry = $cardExpiry;
     }
-    public function setCardSecurityNumber(string $cardSecurityNumber): void
+    public function setCardSecurity(string $cardSecurityNumber): void
     {
         $this->cardSecurityNumber = $cardSecurityNumber;
     }

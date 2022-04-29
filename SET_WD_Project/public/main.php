@@ -1,4 +1,4 @@
-<?php
+    <?php
 require '../src/User.php';
 require '../src/Admin.php';
 require '../src/Customer.php';
@@ -40,13 +40,13 @@ try {
 if ($result && $statement->rowCount() > 0) {
     foreach ($result as $row) {
         if($row["idProduct"] == '5') {
-            $product1 = new Product($row["idProduct"],$row["Admin_idAdmin"],$row["brand"],$row["price"],$row["productDescription"],$row["colour"]);
+            $product1 = new Product($row["idProduct"],$row["Admin_idAdmin"],$row["brand"],$row["price"],$row["productDescription"],$row["colour"], $row["imagePath"]);
         }
         else if($row["idProduct"] == '2'){
-            $product2 = new Product($row["idProduct"],$row["Admin_idAdmin"],$row["brand"],$row["price"],$row["productDescription"],$row["colour"]);
+            $product2 = new Product($row["idProduct"],$row["Admin_idAdmin"],$row["brand"],$row["price"],$row["productDescription"],$row["colour"], $row["imagePath"]);
         }
         else if($row["idProduct"] == '3'){
-            $product3 = new Product($row["idProduct"],$row["Admin_idAdmin"],$row["brand"],$row["price"],$row["productDescription"],$row["colour"]);
+            $product3 = new Product($row["idProduct"],$row["Admin_idAdmin"],$row["brand"],$row["price"],$row["productDescription"],$row["colour"], $row["imagePath"]);
         }
 
     }

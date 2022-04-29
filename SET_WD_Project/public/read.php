@@ -55,7 +55,7 @@ if ($result && $statement->rowCount() > 0) {
 print "\nProducts \n*****\n";
 if ($result1 && $statement1->rowCount() > 0) {
     foreach ($result1 as $row) {
-        $product = new Product($row["idProduct"],$row["Admin_idAdmin"],$row["brand"],$row["price"],$row["productDescription"],$row["colour"]);
+        $product = new Product($row["idProduct"],$row["Admin_idAdmin"],$row["brand"],$row["price"],$row["productDescription"],$row["colour"], $row["imagePath"]);
         print $product;
         print "\n";
     }
