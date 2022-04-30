@@ -1,4 +1,4 @@
-<?php
+    <?php
 require '../src/User.php';
 require '../src/Admin.php';
 require '../src/Customer.php';

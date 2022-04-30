@@ -37,10 +37,31 @@
                 }
             else
             {
-                echo 'username or password is incorrect';
-            }
-            }
+ if (empty($_POST['username']) || empty($_POST['password']))
+                            {
+                                $message = '<label>All fields are required</label>';
+                            }
+                            else
+                            {
+                                $sql2 = "SELECT * FROM Admin WHERE Username =:username AND Password = :password";
+                                $statement2 = $connection->prepare($sql2);
+                                $statement2->execute(
+                                    array(
+                                        'username' => $_POST["username"],
+                                        'password' => $_POST["password"]
+                                    ));
+                                $count2 = $statement2->rowCount();
+                                if($count2 > 0)
+                                {
+                                    $_SESSION["username"] = $_POST["username"];
+                                    header("location:updateProduct.php");
+                                }
+                                else{
 
+                                    echo "Username or password is incorrect";
+                                }}
+                        }
+                    }
         }
 
         ?>

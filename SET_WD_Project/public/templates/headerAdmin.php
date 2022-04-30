@@ -51,6 +51,9 @@
                     <a class="navbar-brand" href="deleteProduct.php">Delete Products</a>
                 </li>
             </ul>
+            <form action="logout.php" method="post" name="Logout_Form" class="form-signin">
+                <button name="Submit" value="Logout" class="btn btn-outline-success"" type="submit">Log out</button>
+            </form>
         </div>
     </div>
 </nav>
